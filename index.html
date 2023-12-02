@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/global.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <!-- HEADER START -->
+    <header class="header">
+      <nav class="sitenav container">
+        <!-- Site Logo -->
+        <a href="#" class="site-logo">Where in the world?</a>
+        <button class="dark-mode-btn">
+          <img
+            src="images/svg/dark-mode-img.svg"
+            alt=""
+            class="dark-mode-img"
+          />
+          <img
+            src="images/svg/light-mode-img.svg"
+            alt=""
+            class="light-mode-img hidden"
+          />
+          <span>Dark Mode</span>
+        </button>
+      </nav>
+    </header>
+    <!-- HEADER END -->
+
+    <!-- MAIN START -->
+    <main class="main">
+      <div class="container">
+        <form class="form">
+          <div class="input-wrapper">
+            <label for="search-input">
+              <img class="search-img" src="images/svg/search.svg" alt="" />
+            </label>
+            <input
+              class="search-input"
+              type="text"
+              id="search-input"
+              required
+              placeholder="Search for a country…"
+            />
+          </div>
+          <div class="select">
+            <span class="select-title"
+              >Filter by Region
+              <svg
+                width="12"
+                height="12"
+                viewBox="0 0 12 12"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.45 3.45L6 6.9L2.55 3.45L1.5 4.5L6 9L10.5 4.5L9.45 3.45Z"
+                  fill="black"
+                />
+              </svg>
+            </span>
+            <ul class="select-list">
+              <li class="select-item">Africa</li>
+              <li class="select-item">Americas</li>
+              <li class="select-item">Asia</li>
+              <li class="select-item">Europe</li>
+              <li class="select-item">Oceania</li>
+            </ul>
+          </div>
+        </form>
+        <ul class="countries-list"></ul>
+      </div>
+    </main>
+    <!-- MAIN END -->
+
+    <!-- Loader -->
+    <div class="overlay hidden" id="overlay">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+
+    <script type="module" src="js/updateUI.js"></script>
+    <script type="module" src="js/mode.js"></script>
+    <script type="module" src="js/request.js"></script>
+    <script type="module" src="js/app.js"></script>
+    <script type="module" src="js/about.js"></script>
+    <script type="module" src="js/filter.js"></script>
+  </body>
+</html>
